@@ -13,10 +13,17 @@ Fato: **storage de vídeo é caro e estoura qualquer tier gratuito** (Supabase f
 banco** — o conteúdo é conhecido em build.
 
 ## Decisão
-1. **Vídeo → embed por link.** Vídeos ficam no **YouTube** (grátis, ilimitado,
-   embed confiável) — recomendado como padrão — ou **Vimeo** (player mais limpo,
-   sem recomendações, tier free limitado) se quiserem visual mais boutique.
-   Reels do Instagram também podem ser embedados como prova social.
+1. **Vídeo → toca DENTRO do site**, por uma destas fontes (`src/lib/videoEmbed.js`):
+   - **Arquivo próprio `.mp4`** em `public/videos/` → `<video>` nativo. Melhor
+     experiência: toca inline, sem marca de terceiros, controle total. Ideal para
+     poucos clipes curtos e otimizados (a preocupação de storage abaixo só vale em
+     escala). Recomendado para hero e cases-âncora.
+   - **YouTube** (nocookie) ou **Vimeo** → player embutido, toca inline. Custo de
+     storage zero; bom quando há muitos vídeos.
+   - **Instagram: descartado.** Testado e reprovado — o embed do IG **não toca
+     inline**: mostra o card e redireciona o visitante pra fora do site. Se um dia
+     quiserem prova social do IG, será uma seção própria (feed), nunca o player de
+     vídeo do portfólio.
 2. **Fotos → assets estáticos** no repositório, servidos pela Vercel (CDN grátis).
    Otimizar (WebP/AVIF, `srcset`). Se o volume crescer muito, migrar para
    **Cloudinary free** (25GB) — decisão futura.

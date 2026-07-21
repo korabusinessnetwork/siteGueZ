@@ -49,8 +49,10 @@ Objetivo: um site institucional + portfólio que gera contato. Status:
 
 ## Decisões pendentes (não bloqueiam o build)
 - Serviço de formulário (Formspree × Web3Forms × Netlify).
-- ~~Plataforma de embed de vídeo~~ — resolvido: lightbox aceita YouTube/Vimeo/Instagram
-  (`src/lib/videoEmbed.js`); YouTube segue como padrão (ADR-004). Falta só colar as URLs.
+- ~~Plataforma de embed de vídeo~~ — resolvido: lightbox toca **dentro do site**
+  (`src/lib/videoEmbed.js`) via arquivo próprio `.mp4` (`<video>` nativo), YouTube ou
+  Vimeo. **Instagram foi descartado**: o embed do IG não toca inline, redireciona pra
+  fora. Falta a GueZ fornecer os vídeos (mp4 em `public/videos/` ou links YouTube/Vimeo).
 - Registrar `guez.com.br` agora ou começar no `guez.vercel.app`.
 
 ## Dívida técnica

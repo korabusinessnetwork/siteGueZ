@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FaPlay } from 'react-icons/fa6'
 import Eyebrow from '../components/Eyebrow.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 import VideoModal from '../components/VideoModal.jsx'
@@ -9,7 +10,7 @@ function PlayGlyph() {
   return (
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
       <div className="w-9 h-9 rounded-full bg-marrom/55 grid place-items-center">
-        <div className="w-0 h-0 border-y-[6px] border-y-transparent border-l-[9px] border-l-papel ml-0.5" />
+        <FaPlay className="text-papel ml-0.5" size={12} aria-hidden="true" />
       </div>
     </div>
   )
@@ -72,7 +73,7 @@ export default function Portfolio() {
               {embed ? (
                 <button
                   type="button"
-                  onClick={() => setVideoAtivo({ embedUrl: embed.embedUrl, titulo: item.titulo, provider: embed.provider })}
+                  onClick={() => setVideoAtivo({ kind: embed.kind, src: embed.src, titulo: item.titulo })}
                   aria-label={`Assistir: ${item.titulo}`}
                   className="block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-laranja-cta"
                 >
@@ -92,9 +93,9 @@ export default function Portfolio() {
 
       {videoAtivo && (
         <VideoModal
-          embedUrl={videoAtivo.embedUrl}
+          kind={videoAtivo.kind}
+          src={videoAtivo.src}
           titulo={videoAtivo.titulo}
-          provider={videoAtivo.provider}
           onClose={() => setVideoAtivo(null)}
         />
       )}

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FaPlay } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button.jsx'
 import Eyebrow from '../components/Eyebrow.jsx'
@@ -156,7 +157,7 @@ export default function Home() {
                 {embed && (
                   <div className="absolute inset-0 grid place-items-center pointer-events-none">
                     <span className="grid place-items-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-marrom/55">
-                      <span className="w-0 h-0 border-y-[5px] md:border-y-[6px] border-y-transparent border-l-[8px] md:border-l-[9px] border-l-papel ml-0.5" />
+                      <FaPlay className="text-papel ml-0.5" size={13} aria-hidden="true" />
                     </span>
                   </div>
                 )}
@@ -172,7 +173,7 @@ export default function Home() {
                 {embed ? (
                   <button
                     type="button"
-                    onClick={() => setVideoAtivo({ embedUrl: embed.embedUrl, titulo: item.titulo, provider: embed.provider })}
+                    onClick={() => setVideoAtivo({ kind: embed.kind, src: embed.src, titulo: item.titulo })}
                     aria-label={`Assistir: ${item.titulo}`}
                     className="block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-laranja-cta"
                   >
@@ -237,9 +238,9 @@ export default function Home() {
 
       {videoAtivo && (
         <VideoModal
-          embedUrl={videoAtivo.embedUrl}
+          kind={videoAtivo.kind}
+          src={videoAtivo.src}
           titulo={videoAtivo.titulo}
-          provider={videoAtivo.provider}
           onClose={() => setVideoAtivo(null)}
         />
       )}
