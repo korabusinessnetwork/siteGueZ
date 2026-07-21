@@ -1,25 +1,14 @@
 import { Link, NavLink } from 'react-router-dom'
 import { NAV } from '../constants/site.js'
 import Button from './Button.jsx'
-
-// Selo/logo placeholder (abelha) — trocar pelo logo vetorial quando chegar.
-function Seal() {
-  return (
-    <span
-      className="grid place-items-center w-9 h-9 rounded-full bg-dourado text-marrom text-base"
-      aria-hidden="true"
-    >
-      🐝
-    </span>
-  )
-}
+import logoMark from '../assets/logo-mark.png'
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-30 bg-creme/95 backdrop-blur border-b border-linha">
       <div className="mx-auto max-w-6xl px-4 md:px-8 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-marrom no-underline">
-          <Seal />
+          <img src={logoMark} alt="" aria-hidden="true" className="h-5 md:h-6 w-auto" />
           <span className="font-display text-lg md:text-xl">GueZ.</span>
         </Link>
 
