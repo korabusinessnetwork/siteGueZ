@@ -26,10 +26,11 @@ export const PORTFOLIO = [
   { id: 8, titulo: 'Casamento ao vivo', tag: 'Real time · Evento', cat: 'realtime', isVideo: true, isRealtime: true, placeholder: 'poster: casamento real time', videoUrl: '' },
 ]
 
-// Destaques da Home
+// Destaques da Home. `videoUrl` funciona igual ao do PORTFOLIO acima: com URL
+// válida o card vira play → abre no modal; vazio ('') fica só com o poster.
 export const PORTFOLIO_DESTAQUE = [
-  { id: 1, titulo: 'Casa Coffee Colab', isRealtime: true, placeholder: 'Casa Coffee Colab' },
-  { id: 2, titulo: 'H.Maria Joias', isRealtime: false, placeholder: 'H.Maria Joias' },
-  { id: 3, titulo: 'Ensaio de marca', isRealtime: false, placeholder: 'Ensaio de marca' },
-  { id: 4, titulo: 'Casamento ao vivo', isRealtime: true, placeholder: 'Casamento ao vivo' },
+  { id: 1, titulo: 'Casa Coffee Colab', isRealtime: true, placeholder: 'Casa Coffee Colab', videoUrl: 'https://www.instagram.com/p/DYnWHpmvJHk/' },
+  { id: 2, titulo: 'H.Maria Joias', isRealtime: false, placeholder: 'H.Maria Joias', videoUrl: '' },
+  { id: 3, titulo: 'Ensaio de marca', isRealtime: false, placeholder: 'Ensaio de marca', videoUrl: '' },
+  { id: 4, titulo: 'Casamento ao vivo', isRealtime: true, placeholder: 'Casamento ao vivo', videoUrl: '' },
 ]

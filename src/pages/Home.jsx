@@ -1,14 +1,18 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button.jsx'
 import Eyebrow from '../components/Eyebrow.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
+import VideoModal from '../components/VideoModal.jsx'
 import { SERVICOS_RESUMO, REAL_TIME_PASSOS } from '../constants/servicos.js'
 import { PORTFOLIO_DESTAQUE } from '../constants/portfolio.js'
 import { DEPOIMENTOS } from '../constants/depoimentos.js'
+import { parseVideo } from '../lib/videoEmbed.js'
 
 const container = 'mx-auto max-w-6xl px-4 md:px-8 lg:px-8'
 
 export default function Home() {
+  const [videoAtivo, setVideoAtivo] = useState(null) // { embedUrl, titulo, provider } | null
   return (
     <>
       {/* HERO — mobile + tablet (imagem com overlay) */}
@@ -139,8 +143,9 @@ export default function Home() {
       <section className={`${container} pb-10 md:pb-12 lg:pb-16`}>
         <Eyebrow className="mb-2.5 md:mb-5">Cases em destaque</Eyebrow>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-4 lg:gap-5">
-          {PORTFOLIO_DESTAQUE.map((item) => (
-            <div key={item.id} className="relative rounded-md md:rounded-md lg:rounded-lg overflow-hidden bg-papel border border-linha">
+          {PORTFOLIO_DESTAQUE.map((item) => {
+            const embed = parseVideo(item.videoUrl)
+            const midia = (
               <div className="relative">
                 <ImagePlaceholder
                   label={item.placeholder}
@@ -148,17 +153,40 @@ export default function Home() {
                   rounded="rounded-none"
                   className="h-[100px] md:h-[140px] lg:h-[180px] w-full"
                 />
+                {embed && (
+                  <div className="absolute inset-0 grid place-items-center pointer-events-none">
+                    <span className="grid place-items-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-marrom/55">
+                      <span className="w-0 h-0 border-y-[5px] md:border-y-[6px] border-y-transparent border-l-[8px] md:border-l-[9px] border-l-papel ml-0.5" />
+                    </span>
+                  </div>
+                )}
                 {item.isRealtime && (
                   <span className="absolute top-1.5 left-1.5 md:top-2 md:left-2 lg:top-2.5 lg:left-2.5 bg-papel rounded-pill px-1.5 md:px-2 lg:px-2.5 py-0.5 md:py-1 text-[8.5px] md:text-[9.5px] lg:text-[10px] font-bold text-laranja-cta">
                     REAL TIME
                   </span>
                 )}
               </div>
-              <div className="px-2.5 md:px-3 lg:px-3.5 py-2 md:py-2.5 lg:py-3 text-[11.5px] md:text-[12.5px] lg:text-[13.5px] font-semibold">
-                {item.titulo}
+            )
+            return (
+              <div key={item.id} className="relative rounded-md md:rounded-md lg:rounded-lg overflow-hidden bg-papel border border-linha">
+                {embed ? (
+                  <button
+                    type="button"
+                    onClick={() => setVideoAtivo({ embedUrl: embed.embedUrl, titulo: item.titulo, provider: embed.provider })}
+                    aria-label={`Assistir: ${item.titulo}`}
+                    className="block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-laranja-cta"
+                  >
+                    {midia}
+                  </button>
+                ) : (
+                  midia
+                )}
+                <div className="px-2.5 md:px-3 lg:px-3.5 py-2 md:py-2.5 lg:py-3 text-[11.5px] md:text-[12.5px] lg:text-[13.5px] font-semibold">
+                  {item.titulo}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
         <Link to="/portfolio" className="inline-block mt-4 md:mt-6 text-sm md:text-[14.5px] font-semibold text-laranja-cta no-underline">
           Ver portfólio completo →
@@ -206,6 +234,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {videoAtivo && (
+        <VideoModal
+          embedUrl={videoAtivo.embedUrl}
+          titulo={videoAtivo.titulo}
+          provider={videoAtivo.provider}
+          onClose={() => setVideoAtivo(null)}
+        />
+      )}
     </>
   )
 }
