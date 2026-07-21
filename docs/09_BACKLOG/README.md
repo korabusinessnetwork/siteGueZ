@@ -7,7 +7,8 @@ Objetivo: um site institucional + portfólio que gera contato. Status:
 
 - [x] Home long-scroll completa (todas as seções de `03_REGRAS_DE_NEGOCIO/`).
 - [x] Página Serviços (planos + real time + avulsos).
-- [x] Página Portfólio (grid filtrável; embeds de vídeo a plugar nos itens).
+- [x] Página Portfólio (grid filtrável + lightbox de vídeo por embed; falta só
+      colar as URLs reais em `src/constants/portfolio.js`).
 - [x] Página Sobre (a dupla + processo).
 - [x] Página Contato (formulário validado + máquina de estados + WhatsApp + LGPD).
 - [x] Política de Privacidade.
@@ -48,7 +49,8 @@ Objetivo: um site institucional + portfólio que gera contato. Status:
 
 ## Decisões pendentes (não bloqueiam o build)
 - Serviço de formulário (Formspree × Web3Forms × Netlify).
-- Plataforma de embed de vídeo (YouTube × Vimeo — ADR-004).
+- ~~Plataforma de embed de vídeo~~ — resolvido: lightbox aceita YouTube/Vimeo/Instagram
+  (`src/lib/videoEmbed.js`); YouTube segue como padrão (ADR-004). Falta só colar as URLs.
 - Registrar `guez.com.br` agora ou começar no `guez.vercel.app`.
 
 ## Dívida técnica

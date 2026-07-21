@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import Eyebrow from '../components/Eyebrow.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
+import VideoModal from '../components/VideoModal.jsx'
 import { FILTROS, PORTFOLIO } from '../constants/portfolio.js'
+import { parseVideo } from '../lib/videoEmbed.js'
 
 function PlayGlyph() {
   return (
@@ -15,6 +17,7 @@ function PlayGlyph() {
 
 export default function Portfolio() {
   const [filtro, setFiltro] = useState('todos')
+  const [videoAtivo, setVideoAtivo] = useState(null) // { embedUrl, titulo } | null
   const visiveis = filtro === 'todos' ? PORTFOLIO : PORTFOLIO.filter((i) => i.cat === filtro)
 
   return (
@@ -46,8 +49,9 @@ export default function Portfolio() {
 
       {/* GRID */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5 md:gap-4 lg:gap-5 mt-5">
-        {visiveis.map((item) => (
-          <div key={item.id} className="bg-papel border border-linha rounded-md overflow-hidden shadow-soft">
+        {visiveis.map((item) => {
+          const embed = parseVideo(item.videoUrl)
+          const midia = (
             <div className="relative">
               <ImagePlaceholder
                 label={item.placeholder}
@@ -55,20 +59,45 @@ export default function Portfolio() {
                 rounded="rounded-none"
                 className="h-[120px] md:h-[150px] lg:h-[170px] w-full"
               />
-              {item.isVideo && <PlayGlyph />}
+              {embed && <PlayGlyph />}
               {item.isRealtime && (
                 <span className="absolute top-2 left-2 bg-papel rounded-pill px-2 py-0.5 text-[9px] font-bold text-laranja-cta">
                   REAL TIME
                 </span>
               )}
             </div>
-            <div className="px-3 py-2.5">
-              <div className="text-[12.5px] font-semibold leading-tight">{item.titulo}</div>
-              <div className="text-[11px] text-marrom-label mt-0.5">{item.tag}</div>
+          )
+          return (
+            <div key={item.id} className="bg-papel border border-linha rounded-md overflow-hidden shadow-soft">
+              {embed ? (
+                <button
+                  type="button"
+                  onClick={() => setVideoAtivo({ embedUrl: embed.embedUrl, titulo: item.titulo, provider: embed.provider })}
+                  aria-label={`Assistir: ${item.titulo}`}
+                  className="block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-laranja-cta"
+                >
+                  {midia}
+                </button>
+              ) : (
+                midia
+              )}
+              <div className="px-3 py-2.5">
+                <div className="text-[12.5px] font-semibold leading-tight">{item.titulo}</div>
+                <div className="text-[11px] text-marrom-label mt-0.5">{item.tag}</div>
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
+
+      {videoAtivo && (
+        <VideoModal
+          embedUrl={videoAtivo.embedUrl}
+          titulo={videoAtivo.titulo}
+          provider={videoAtivo.provider}
+          onClose={() => setVideoAtivo(null)}
+        />
+      )}
     </div>
   )
 }

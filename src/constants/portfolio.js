@@ -1,5 +1,12 @@
-// Itens do portfólio. `videoUrl` = embed (YouTube/Vimeo) — ver ADR-004.
-// Imagens/vídeos ainda são placeholders; trocar por assets reais.
+// Itens do portfólio. Imagens/vídeos ainda são placeholders; trocar por reais.
+//
+// PARA PLUGAR UM VÍDEO: cole a URL de compartilhamento em `videoUrl` — o card
+// vira um play que abre o vídeo num modal (ver src/lib/videoEmbed.js + ADR-004).
+// Aceita YouTube, Vimeo e Instagram, em qualquer formato de link. Ex.:
+//   videoUrl: 'https://youtu.be/XXXXXXXXXXX'          (YouTube)
+//   videoUrl: 'https://vimeo.com/123456789'           (Vimeo)
+//   videoUrl: 'https://www.instagram.com/reel/XXXX/'   (Reel)
+// Deixe '' (vazio) enquanto não houver vídeo — o card fica só com o poster.
 export const FILTROS = [
   { id: 'todos', label: 'Todos' },
   { id: 'realtime', label: 'Real time / Eventos' },
@@ -9,7 +16,7 @@ export const FILTROS = [
 ]
 
 export const PORTFOLIO = [
-  { id: 1, titulo: 'Casa Coffee Colab', tag: 'Real time · Evento', cat: 'realtime', isVideo: true, isRealtime: true, placeholder: 'poster: evento Casa Coffee Colab', videoUrl: '' },
+  { id: 1, titulo: 'Casa Coffee Colab', tag: 'Real time · Evento', cat: 'realtime', isVideo: true, isRealtime: true, placeholder: 'poster: evento Casa Coffee Colab', videoUrl: 'https://www.instagram.com/reel/Daxp-qchwMe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' },
   { id: 2, titulo: 'H.Maria Joias', tag: 'Social · Feed', cat: 'social', isVideo: false, isRealtime: false, placeholder: 'foto: feed H.Maria Joias', videoUrl: '' },
   { id: 3, titulo: 'H.Maria Joias', tag: 'Foto de produto', cat: 'foto', isVideo: false, isRealtime: false, placeholder: 'foto: still de joia', videoUrl: '' },
   { id: 4, titulo: 'Casa Coffee Colab', tag: 'Vídeo institucional', cat: 'video', isVideo: true, isRealtime: false, placeholder: 'poster: vídeo institucional', videoUrl: '' },
