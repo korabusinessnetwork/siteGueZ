@@ -37,7 +37,9 @@ Objetivo: um site institucional + portfólio que gera contato. Status:
 6. **Pós-launch** — SEO local (Novo Hamburgo), ajustes por métrica (contatos/mês).
 
 ## Pendências de assets reais (do handoff de design)
-- [ ] **Logo vetorial** (SVG) — para o selo/abelha no header/footer e re-amostrar hex.
+- [x] **Logo** — wordmark "GueZ." com asas recebido (`src/logo.png`, PNG transparente).
+      Variantes geradas em `src/assets/`: `logo-marrom.png` (header, fundo claro) e
+      `logo-creme.png` (rodapé, fundo escuro). *Nice-to-have:* versão SVG p/ nitidez em telas grandes.
 - [ ] **Fotos/vídeos reais** — reel do hero, retratos de Lucy e Érica, stills de
       eventos/real time, cases Casa Coffee Colab e H.Maria Joias. (Hoje: placeholders.)
 - [ ] **Preços dos planos** Light/Basic/Plus (ou manter "Investimento sob consulta").

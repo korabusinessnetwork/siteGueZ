@@ -4,9 +4,9 @@ import { PLANOS, REAL_TIME_PASSOS, AVULSOS } from '../constants/servicos.js'
 
 export default function Servicos() {
   return (
-    <div className="mx-auto max-w-5xl px-4 md:px-8 py-10 md:py-14">
+    <div className="mx-auto max-w-5xl px-4 md:px-8 py-10 md:py-12 lg:py-14">
       <Eyebrow>Serviços</Eyebrow>
-      <h1 className="font-display text-[26px] md:text-4xl leading-tight mt-1.5 mb-2">
+      <h1 className="font-display text-[26px] md:text-[32px] lg:text-4xl leading-tight mt-1.5 mb-2">
         Planos, real time e trabalhos avulsos
       </h1>
       <p className="text-sm md:text-base text-marrom-2 max-w-2xl">
@@ -14,11 +14,11 @@ export default function Servicos() {
       </p>
 
       {/* PLANOS */}
-      <div className="grid gap-5 md:grid-cols-3 md:gap-6 mt-8">
+      <div className="grid gap-5 md:grid-cols-3 md:gap-4 lg:gap-6 mt-8">
         {PLANOS.map((plano) => (
           <div
             key={plano.nome}
-            className={`relative rounded-lg p-6 bg-papel ${
+            className={`relative rounded-lg p-5 lg:p-6 bg-papel ${
               plano.destaque ? 'border-2 border-laranja-cta shadow-soft' : 'border border-linha'
             }`}
           >
@@ -43,7 +43,7 @@ export default function Servicos() {
       </div>
 
       {/* REAL TIME */}
-      <div className="bg-marrom text-creme rounded-lg p-6 md:p-10 mt-10">
+      <div className="bg-marrom text-creme rounded-lg p-6 md:p-8 lg:p-10 mt-10">
         <div className="inline-block border-[1.5px] border-dashed border-dourado rounded-pill px-3 py-1 text-[11px] tracking-wide text-dourado mb-3">
           SERVIÇO-ASSINATURA
         </div>
@@ -54,7 +54,7 @@ export default function Servicos() {
           Fotografamos e filmamos o seu evento e entregamos conteúdo editado ainda durante a
           festa — para quem não quer esperar até o dia seguinte.
         </p>
-        <div className="flex flex-col md:flex-row md:gap-8 gap-3">
+        <div className="flex flex-col md:flex-row md:gap-5 lg:gap-8 gap-3">
           {REAL_TIME_PASSOS.map((p, i) => (
             <div key={i} className="flex gap-3 items-start md:flex-1">
               <div className="shrink-0 grid place-items-center w-7 h-7 rounded-full bg-dourado text-marrom text-[13px] font-bold">

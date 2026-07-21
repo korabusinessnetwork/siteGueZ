@@ -1,18 +1,17 @@
 import { Link, NavLink } from 'react-router-dom'
 import { NAV } from '../constants/site.js'
 import Button from './Button.jsx'
-import logoMark from '../assets/logo-mark.png'
+import logoMarrom from '../assets/logo-marrom.png'
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-30 bg-creme/95 backdrop-blur border-b border-linha">
       <div className="mx-auto max-w-6xl px-4 md:px-8 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 text-marrom no-underline">
-          <img src={logoMark} alt="" aria-hidden="true" className="h-5 md:h-6 w-auto" />
-          <span className="font-display text-lg md:text-xl">GueZ.</span>
+        <Link to="/" className="flex items-center text-marrom no-underline">
+          <img src={logoMarrom} alt="GueZ" className="h-7 md:h-8 w-auto" />
         </Link>
 
-        <nav className="hidden md:flex gap-9 text-[15px]">
+        <nav className="hidden md:flex gap-5 lg:gap-9 text-[13px] lg:text-[15px]">
           {NAV.map((n) => (
             <NavLink
               key={n.to}

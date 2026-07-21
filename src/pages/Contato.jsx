@@ -45,9 +45,9 @@ export default function Contato() {
   }
 
   return (
-    <div className="mx-auto max-w-xl px-4 md:px-8 py-10 md:py-14">
+    <div className="mx-auto max-w-xl px-4 md:px-8 py-10 md:py-12 lg:py-14">
       <Eyebrow>Contato</Eyebrow>
-      <h1 className="font-display text-[26px] md:text-4xl leading-tight mt-1.5 mb-2">
+      <h1 className="font-display text-[26px] md:text-[32px] lg:text-4xl leading-tight mt-1.5 mb-2">
         Vamos contar essa história?
       </h1>
       <p className="text-sm md:text-base text-marrom-2">

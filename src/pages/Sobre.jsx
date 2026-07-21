@@ -16,9 +16,9 @@ const PROCESSO = [
 
 export default function Sobre() {
   return (
-    <div className="mx-auto max-w-4xl px-4 md:px-8 py-10 md:py-14">
+    <div className="mx-auto max-w-4xl px-4 md:px-8 py-10 md:py-12 lg:py-14">
       <Eyebrow>Sobre</Eyebrow>
-      <h1 className="font-display text-[26px] md:text-4xl leading-tight mt-1.5 mb-3">
+      <h1 className="font-display text-[26px] md:text-[32px] lg:text-4xl leading-tight mt-1.5 mb-3">
         Duas mulheres, uma marca feita de histórias
       </h1>
       <p className="text-sm md:text-[17px] leading-relaxed text-marrom-2 max-w-2xl">
@@ -40,7 +40,7 @@ export default function Sobre() {
 
       {/* PROCESSO */}
       <h2 className="font-display text-2xl mt-12 mb-5">Como trabalhamos</h2>
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 md:gap-4 lg:gap-5 md:grid-cols-2">
         {PROCESSO.map((s, i) => (
           <div key={i} className="bg-papel border border-linha rounded-lg p-5 flex gap-3.5">
             <div className="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-laranja-cta text-papel text-sm font-bold">

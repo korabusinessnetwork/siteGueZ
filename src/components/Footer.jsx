@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 import { SITE, NAV } from '../constants/site.js'
-import logoFull from '../assets/logo-full.png'
+import logoCreme from '../assets/logo-creme.png'
 
 export default function Footer() {
   return (
     <footer className="bg-marrom text-creme-sobre-escuro">
       <div className="mx-auto max-w-6xl px-4 md:px-8 py-10 md:py-12 flex flex-col md:flex-row md:justify-between gap-8">
         <div className="max-w-sm">
-          <img src={logoFull} alt="GueZ" className="h-9 w-auto mb-3" />
+          <img src={logoCreme} alt="GueZ" className="h-10 w-auto mb-3" />
           <p className="text-[13.5px] leading-relaxed text-creme-rodape">{SITE.tagline}</p>
         </div>
 

@@ -18,9 +18,9 @@ export default function Portfolio() {
   const visiveis = filtro === 'todos' ? PORTFOLIO : PORTFOLIO.filter((i) => i.cat === filtro)
 
   return (
-    <div className="mx-auto max-w-5xl px-4 md:px-8 py-10 md:py-14">
+    <div className="mx-auto max-w-5xl px-4 md:px-8 py-10 md:py-12 lg:py-14">
       <Eyebrow>Portfólio</Eyebrow>
-      <h1 className="font-display text-[26px] md:text-4xl leading-tight mt-1.5 mb-2">
+      <h1 className="font-display text-[26px] md:text-[32px] lg:text-4xl leading-tight mt-1.5 mb-2">
         Histórias que já contamos
       </h1>
       <p className="text-sm md:text-base text-marrom-2 max-w-2xl">
@@ -45,7 +45,7 @@ export default function Portfolio() {
       </div>
 
       {/* GRID */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5 md:gap-5 mt-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5 md:gap-4 lg:gap-5 mt-5">
         {visiveis.map((item) => (
           <div key={item.id} className="bg-papel border border-linha rounded-md overflow-hidden shadow-soft">
             <div className="relative">
@@ -53,7 +53,7 @@ export default function Portfolio() {
                 label={item.placeholder}
                 bordered={false}
                 rounded="rounded-none"
-                className="h-[120px] md:h-[160px] w-full"
+                className="h-[120px] md:h-[150px] lg:h-[170px] w-full"
               />
               {item.isVideo && <PlayGlyph />}
               {item.isRealtime && (
