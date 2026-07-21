@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>body{margin:0;background:#EAD9B8;}</style>
+</helmet>
+
+<div style="font-family:'Work Sans',Arial,sans-serif;background:#EAD9B8;min-height:100vh;padding:40px 0;display:flex;justify-content:center;">
+<div style="width:100%;max-width:430px;background:#F4ECDB;color:#3B2A1D;box-shadow:0 20px 60px rgba(59,42,29,.22);min-height:100vh;position:relative;">
+
+  <!-- HEADER -->
+  <header style="position:sticky;top:0;z-index:10;background:#F4ECDB;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #DCC9A3;">
+    <a href="./Home.dc.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#3B2A1D;">
+      <image-slot id="servicos-logo" shape="circle" placeholder="logo" style="width:34px;height:34px"></image-slot>
+      <span style="font-family:Georgia,serif;font-size:17px;">GueZ.</span>
+    </a>
+    <a href="./Contato.dc.html" style="background:#A83E1D;color:#FBF6EC;font-size:12px;font-weight:600;padding:9px 16px;border-radius:999px;text-decoration:none;">Fale com a gente</a>
+  </header>
+
+  <nav style="display:flex;gap:16px;padding:12px 18px;font-size:12.5px;color:#6B5642;border-bottom:1px solid #DCC9A3;overflow-x:auto;">
+    <a href="./Servicos.dc.html" style="color:#A83E1D;font-weight:700;text-decoration:none;white-space:nowrap;">Serviços</a>
+    <a href="./Portfolio.dc.html" style="color:#6B5642;text-decoration:none;white-space:nowrap;">Portfólio</a>
+    <a href="#" style="color:#6B5642;text-decoration:none;white-space:nowrap;">Sobre</a>
+    <a href="./Contato.dc.html" style="color:#6B5642;text-decoration:none;white-space:nowrap;">Contato</a>
+  </nav>
+
+  <!-- TITLE -->
+  <div style="padding:28px 18px 8px;">
+    <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a6f4e;">Serviços</div>
+    <h1 style="font-family:Georgia,serif;font-size:26px;line-height:1.2;margin:6px 0 8px;">Planos, real time e trabalhos avulsos</h1>
+    <p style="font-size:14px;line-height:1.55;color:#6B5642;margin:0;">Escolha o formato que combina com o momento da sua marca — sempre com storytelling no centro.</p>
+  </div>
+
+  <!-- PLANS -->
+  <div style="padding:20px 18px 0;display:flex;flex-direction:column;gap:16px;">
+
+    <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:18px;padding:22px;position:relative;">
+      <div style="font-family:Georgia,serif;font-size:19px;">GueZ Light</div>
+      <div style="font-size:13px;color:#6B5642;margin:6px 0 14px;">Para quem está começando a organizar a presença digital</div>
+      <ul style="list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:7px;font-size:13px;">
+        <li>✓ 8 artes/mês</li><li>✓ Stories quinzenais</li><li>✓ Bio e destaques</li>
+      </ul>
+      <div style="font-size:12px;color:#8a6f4e;margin-bottom:12px;">Investimento sob consulta</div>
+      <a href="./Contato.dc.html" style="display:block;text-align:center;background:transparent;border:1.5px solid #3B2A1D;color:#3B2A1D;padding:11px;border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;">Quero esse plano</a>
+    </div>
+
+    <div style="background:#FBF6EC;border:2px solid #A83E1D;border-radius:18px;padding:22px;position:relative;box-shadow:0 10px 28px rgba(59,42,29,.14);">
+      <div style="position:absolute;top:-12px;left:20px;background:#A83E1D;color:#FBF6EC;font-size:10.5px;font-weight:700;letter-spacing:.05em;padding:5px 12px;border-radius:999px;">MAIS PROCURADO</div>
+      <div style="font-family:Georgia,serif;font-size:19px;margin-top:4px;">GueZ Basic</div>
+      <div style="font-size:13px;color:#6B5642;margin:6px 0 14px;">Presença consistente com estratégia mensal</div>
+      <ul style="list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:7px;font-size:13px;">
+        <li>✓ 12 artes/mês + carrossel</li><li>✓ Stories semanais</li><li>✓ 1 reels/mês com roteiro</li><li>✓ Relatório mensal</li>
+      </ul>
+      <div style="font-size:12px;color:#8a6f4e;margin-bottom:12px;">Investimento sob consulta</div>
+      <a href="./Contato.dc.html" style="display:block;text-align:center;background:#A83E1D;color:#FBF6EC;padding:11px;border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;">Quero esse plano</a>
+    </div>
+
+    <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:18px;padding:22px;">
+      <div style="font-family:Georgia,serif;font-size:19px;">GueZ Plus</div>
+      <div style="font-size:13px;color:#6B5642;margin:6px 0 14px;">Para marcas que querem presença completa e ativa</div>
+      <ul style="list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:7px;font-size:13px;">
+        <li>✓ 20 artes/mês + carrossel</li><li>✓ Stories diários</li><li>✓ 4 reels/mês com roteiro</li><li>✓ Acompanhamento semanal</li><li>✓ Prioridade em real time de eventos</li>
+      </ul>
+      <div style="font-size:12px;color:#8a6f4e;margin-bottom:12px;">Investimento sob consulta</div>
+      <a href="./Contato.dc.html" style="display:block;text-align:center;background:transparent;border:1.5px solid #3B2A1D;color:#3B2A1D;padding:11px;border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;">Quero esse plano</a>
+    </div>
+  </div>
+
+  <!-- REAL TIME -->
+  <div style="margin:32px 18px 0;background:#3B2A1D;color:#F4ECDB;border-radius:20px;padding:26px 22px;">
+    <div style="display:inline-block;border:1.5px dashed #D6A24A;border-radius:999px;padding:4px 12px;font-size:11px;letter-spacing:.06em;color:#D6A24A;margin-bottom:12px;">SERVIÇO-ASSINATURA</div>
+    <div style="font-family:Georgia,serif;font-size:21px;line-height:1.25;margin-bottom:8px;">Cobertura de eventos em real time</div>
+    <p style="font-size:13.5px;line-height:1.55;color:#E7D9BE;margin:0 0 18px;">Fotografamos e filmamos o seu evento e entregamos conteúdo editado ainda durante a festa — para quem não quer esperar até o dia seguinte.</p>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#D6A24A;color:#3B2A1D;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+        <div style="font-size:13px;color:#F4ECDB;padding-top:4px;">Captamos os melhores momentos ao vivo</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#D6A24A;color:#3B2A1D;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+        <div style="font-size:13px;color:#F4ECDB;padding-top:4px;">Editamos no local, em tempo real</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#D6A24A;color:#3B2A1D;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+        <div style="font-size:13px;color:#F4ECDB;padding-top:4px;">Entregamos durante o próprio evento</div>
+      </div>
+    </div>
+    <a href="./Contato.dc.html" style="display:block;text-align:center;margin-top:20px;background:#D6A24A;color:#3B2A1D;padding:12px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;">Pedir orçamento de real time</a>
+  </div>
+
+  <!-- AVULSOS -->
+  <div style="padding:32px 18px 40px;">
+    <h2 style="font-family:Georgia,serif;font-size:20px;margin:0 0 16px;">Trabalhos avulsos</h2>
+
+    <div style="font-size:13px;font-weight:700;color:#A83E1D;margin-bottom:8px;">Criação</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;">
+      <span style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:999px;padding:8px 14px;font-size:12.5px;">Posts avulsos</span>
+      <span style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:999px;padding:8px 14px;font-size:12.5px;">Edição de vídeo</span>
+      <span style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:999px;padding:8px 14px;font-size:12.5px;">Stories animado</span>
+      <span style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:999px;padding:8px 14px;font-size:12.5px;">Capa de destaques</span>
+      <span style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:999px;padding:8px 14px;font-size:12.5px;">Pack de artes / carrossel</span>
+    </div>
+
+    <div style="font-size:13px;font-weight:700;color:#A83E1D;margin-bottom:8px;">Estratégia &amp; presença</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <span style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:999px;padding:8px 14px;font-size:12.5px;">Legendas</span>
+      <span style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:999px;padding:8px 14px;font-size:12.5px;">Bio otimizada</span>
+      <span style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:999px;padding:8px 14px;font-size:12.5px;">Reels + roteiro</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer style="background:#3B2A1D;color:#E7D9BE;padding:32px 18px 90px;">
+    <div style="font-family:Georgia,serif;font-size:18px;color:#F4ECDB;margin-bottom:8px;">GueZ.</div>
+    <p style="font-size:13px;line-height:1.55;margin:0 0 18px;color:#C9B695;">Marketing e mídias sociais boutique, de Novo Hamburgo para o mundo — histórias contadas de verdade.</p>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;margin-bottom:18px;">
+      <a href="./Servicos.dc.html" style="color:#E7D9BE;text-decoration:none;">Serviços</a>
+      <a href="./Portfolio.dc.html" style="color:#E7D9BE;text-decoration:none;">Portfólio</a>
+      <a href="#" style="color:#E7D9BE;text-decoration:none;">Sobre</a>
+      <a href="./Contato.dc.html" style="color:#E7D9BE;text-decoration:none;">Contato</a>
+    </div>
+    <div style="font-size:12.5px;color:#C9B695;display:flex;flex-direction:column;gap:4px;">
+      <span>@guez.com.br</span>
+      <span>guezagenciamkt@gmail.com</span>
+      <span>Novo Hamburgo / RS</span>
+      <a href="#" style="color:#D6A24A;text-decoration:none;margin-top:6px;">Política de Privacidade</a>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5551999999999" style="position:fixed;bottom:24px;right:calc(50% - 195px);width:54px;height:54px;background:#A83E1D;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(59,42,29,.35);text-decoration:none;z-index:20;">
+    <div style="position:relative;width:22px;height:18px;background:#FBF6EC;border-radius:8px;"><div style="position:absolute;bottom:-5px;left:6px;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #FBF6EC;"></div></div>
+  </a>
+
+</div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script></script>
+</body>
+</html>

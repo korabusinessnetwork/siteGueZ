@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body{margin:0;background:#EAD9B8;}
+  a{color:#A83E1D;}
+  a:hover{color:#8f3316;}
+</style>
+</helmet>
+
+<div style="font-family:'Work Sans',Arial,sans-serif;background:#EAD9B8;min-height:100vh;padding:40px 24px 80px;">
+
+  <div style="max-width:1120px;margin:0 auto 32px;text-align:center;">
+    <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a6f4e;">Home — mockup visual</div>
+    <div style="font-family:Georgia,serif;font-size:20px;color:#3B2A1D;margin-top:4px;">Toda marca tem uma história que merece ser contada de verdade</div>
+  </div>
+
+  <div style="display:flex;gap:40px;justify-content:center;align-items:flex-start;flex-wrap:wrap;">
+
+  <sc-if value="{{ showMobile }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="text-align:center;font-size:12px;color:#8a6f4e;margin-bottom:10px;letter-spacing:.06em;text-transform:uppercase;">Mobile · 390px</div>
+    <div style="width:390px;background:#F4ECDB;color:#3B2A1D;border-radius:32px;overflow:hidden;box-shadow:0 24px 60px rgba(59,42,29,.28);position:relative;">
+
+      <header style="position:sticky;top:0;z-index:10;background:#F4ECDB;display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid #DCC9A3;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <image-slot id="hm-logo" shape="circle" placeholder="logo" style="width:32px;height:32px"></image-slot>
+          <span style="font-family:Georgia,serif;font-size:16px;">GueZ.</span>
+        </div>
+        <a href="./Contato.dc.html" style="background:#A83E1D;color:#FBF6EC;font-size:11.5px;font-weight:600;padding:8px 14px;border-radius:999px;text-decoration:none;">Fale com a gente</a>
+      </header>
+
+      <!-- HERO -->
+      <div style="position:relative;height:460px;">
+        <image-slot id="hm-hero" shape="rect" placeholder="reel/foto de capa" style="width:100%;height:100%"></image-slot>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(59,42,29,.82),rgba(59,42,29,.25) 55%,rgba(59,42,29,.1));pointer-events:none;"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:24px 18px;">
+          <h1 style="font-family:Georgia,serif;font-size:28px;line-height:1.2;color:#F4ECDB;margin:0 0 10px;">Toda marca tem uma história que merece ser contada de verdade</h1>
+          <p style="font-size:13.5px;line-height:1.5;color:#E7D9BE;margin:0 0 16px;">Agência boutique de marketing e social media, com cobertura de eventos em tempo real. Novo Hamburgo e Vale do Sinos.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="./Contato.dc.html" style="background:#A83E1D;color:#FBF6EC;padding:12px 20px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;">Fale com a gente</a>
+            <a href="./Servicos.dc.html" style="background:transparent;border:1.5px solid #F4ECDB;color:#F4ECDB;padding:12px 20px;border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;">Ver serviços</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUEM É -->
+      <div style="padding:32px 18px;">
+        <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a6f4e;">Quem é a GueZ</div>
+        <p style="font-family:Georgia,serif;font-size:19px;line-height:1.35;margin:8px 0 18px;">Somos a Lucy e a Érica: storytelling, marketing e fotografia, de perto e com alma.</p>
+        <div style="display:flex;gap:16px;">
+          <div style="text-align:center;flex:1;">
+            <image-slot id="hm-lucy" shape="circle" placeholder="foto Lucy" style="width:76px;height:76px;margin:0 auto;"></image-slot>
+            <div style="font-size:13px;font-weight:600;margin-top:8px;">Lucy Freitas</div>
+            <div style="font-size:11.5px;color:#8a6f4e;">Storymaker</div>
+          </div>
+          <div style="text-align:center;flex:1;">
+            <image-slot id="hm-erica" shape="circle" placeholder="foto Érica" style="width:76px;height:76px;margin:0 auto;"></image-slot>
+            <div style="font-size:13px;font-weight:600;margin-top:8px;">Érica Schmidt</div>
+            <div style="font-size:11.5px;color:#8a6f4e;">Marketing &amp; fotografia</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVIÇOS RESUMO -->
+      <div style="padding:0 18px 32px;">
+        <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a6f4e;margin-bottom:8px;">Serviços</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:16px;padding:18px;">
+            <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:4px;">Planos mensais</div>
+            <div style="font-size:13px;color:#6B5642;">Presença constante no social media, do Light ao Plus.</div>
+          </div>
+          <div style="background:#3B2A1D;border-radius:16px;padding:18px;color:#F4ECDB;">
+            <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:4px;">Real time de eventos ✦</div>
+            <div style="font-size:13px;color:#E7D9BE;">Foto e vídeo entregues durante o próprio evento.</div>
+          </div>
+          <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:16px;padding:18px;">
+            <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:4px;">Avulsos</div>
+            <div style="font-size:13px;color:#6B5642;">Posts, vídeos, artes e estratégia sob demanda.</div>
+          </div>
+        </div>
+        <a href="./Servicos.dc.html" style="display:block;text-align:center;margin-top:14px;font-size:13px;font-weight:600;text-decoration:none;">Ver todos os serviços →</a>
+      </div>
+
+      <!-- DIFERENCIAL REAL TIME -->
+      <div style="margin:0 18px 32px;background:#EAD9B8;border-radius:18px;padding:22px;">
+        <div style="font-family:Georgia,serif;font-size:18px;margin-bottom:14px;">Como funciona o real time</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="width:26px;height:26px;border-radius:50%;background:#A83E1D;color:#FBF6EC;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div><div style="font-size:13px;padding-top:3px;">Captamos os melhores momentos</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="width:26px;height:26px;border-radius:50%;background:#A83E1D;color:#FBF6EC;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div><div style="font-size:13px;padding-top:3px;">Editamos no local, em tempo real</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="width:26px;height:26px;border-radius:50%;background:#A83E1D;color:#FBF6EC;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div><div style="font-size:13px;padding-top:3px;">Entregamos durante o evento</div></div>
+        </div>
+      </div>
+
+      <!-- PORTFOLIO DESTAQUE -->
+      <div style="padding:0 18px 32px;">
+        <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a6f4e;margin-bottom:10px;">Cases em destaque</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="position:relative;border-radius:14px;overflow:hidden;background:#FBF6EC;border:1px solid #DCC9A3;">
+            <image-slot id="hm-pf-1" shape="rect" placeholder="Casa Coffee Colab" style="width:100%;height:100px"></image-slot>
+            <div style="position:absolute;top:6px;left:6px;background:#FBF6EC;border-radius:999px;padding:2px 7px;font-size:8.5px;font-weight:700;color:#A83E1D;">REAL TIME</div>
+            <div style="padding:8px 10px;font-size:11.5px;font-weight:600;">Casa Coffee Colab</div>
+          </div>
+          <div style="border-radius:14px;overflow:hidden;background:#FBF6EC;border:1px solid #DCC9A3;">
+            <image-slot id="hm-pf-2" shape="rect" placeholder="H.Maria Joias" style="width:100%;height:100px"></image-slot>
+            <div style="padding:8px 10px;font-size:11.5px;font-weight:600;">H.Maria Joias</div>
+          </div>
+        </div>
+        <a href="./Portfolio.dc.html" style="display:block;text-align:center;margin-top:14px;font-size:13px;font-weight:600;text-decoration:none;">Ver portfólio completo →</a>
+      </div>
+
+      <!-- DEPOIMENTOS -->
+      <div style="padding:0 18px 32px;">
+        <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a6f4e;margin-bottom:10px;">Quem já contou a história com a gente</div>
+        <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:16px;padding:18px;margin-bottom:12px;">
+          <p style="font-family:Georgia,serif;font-style:italic;font-size:14.5px;line-height:1.5;margin:0 0 10px;">"A GueZ entendeu nossa marca antes mesmo da gente conseguir explicar."</p>
+          <div style="font-size:12px;color:#8a6f4e;">Casa Coffee Colab</div>
+        </div>
+        <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:16px;padding:18px;">
+          <p style="font-family:Georgia,serif;font-style:italic;font-size:14.5px;line-height:1.5;margin:0 0 10px;">"Receber o vídeo do evento ainda na festa foi surreal."</p>
+          <div style="font-size:12px;color:#8a6f4e;">H.Maria Joias</div>
+        </div>
+      </div>
+
+      <!-- CTA FINAL -->
+      <div style="margin:0 18px 32px;background:#3B2A1D;border-radius:18px;padding:24px 20px;color:#F4ECDB;">
+        <div style="font-family:Georgia,serif;font-size:19px;margin-bottom:8px;">Bora contar essa história?</div>
+        <p style="font-size:13px;color:#E7D9BE;margin:0 0 16px;">Deixa seu contato que a gente te chama.</p>
+        <input placeholder="Seu nome" style="width:100%;box-sizing:border-box;padding:11px 14px;border-radius:10px;border:none;background:#F4ECDB;font-size:13.5px;margin-bottom:10px;color:#3B2A1D;"/>
+        <input placeholder="WhatsApp ou e-mail" style="width:100%;box-sizing:border-box;padding:11px 14px;border-radius:10px;border:none;background:#F4ECDB;font-size:13.5px;margin-bottom:14px;color:#3B2A1D;"/>
+        <a href="./Contato.dc.html" style="display:block;text-align:center;background:#D6A24A;color:#3B2A1D;padding:12px;border-radius:999px;font-size:13.5px;font-weight:700;text-decoration:none;">Enviar</a>
+      </div>
+
+      <footer style="background:#3B2A1D;color:#E7D9BE;padding:28px 18px 90px;">
+        <div style="font-family:Georgia,serif;font-size:17px;color:#F4ECDB;margin-bottom:8px;">GueZ.</div>
+        <p style="font-size:12.5px;line-height:1.5;margin:0 0 16px;color:#C9B695;">Marketing e mídias sociais boutique, de Novo Hamburgo para o mundo.</p>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:12.5px;margin-bottom:16px;">
+          <a href="./Servicos.dc.html" style="color:#E7D9BE;text-decoration:none;">Serviços</a>
+          <a href="./Portfolio.dc.html" style="color:#E7D9BE;text-decoration:none;">Portfólio</a>
+          <a href="#" style="color:#E7D9BE;text-decoration:none;">Sobre</a>
+          <a href="./Contato.dc.html" style="color:#E7D9BE;text-decoration:none;">Contato</a>
+        </div>
+        <div style="font-size:11.5px;color:#C9B695;display:flex;flex-direction:column;gap:4px;">
+          <span>@guez.com.br</span><span>guezagenciamkt@gmail.com</span><span>Novo Hamburgo / RS</span>
+          <a href="#" style="color:#D6A24A;text-decoration:none;margin-top:6px;">Política de Privacidade</a>
+        </div>
+      </footer>
+
+      <a href="https://wa.me/5551999999999" style="position:absolute;bottom:24px;right:18px;width:50px;height:50px;background:#A83E1D;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(59,42,29,.35);text-decoration:none;">
+        <div style="position:relative;width:20px;height:16px;background:#FBF6EC;border-radius:7px;"><div style="position:absolute;bottom:-4px;left:5px;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid #FBF6EC;"></div></div>
+      </a>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ showDesktop }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="text-align:center;font-size:12px;color:#8a6f4e;margin-bottom:10px;letter-spacing:.06em;text-transform:uppercase;">Desktop · 1440px</div>
+    <div style="width:1440px;background:#F4ECDB;color:#3B2A1D;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(59,42,29,.28);">
+
+      <header style="display:flex;align-items:center;justify-content:space-between;padding:20px 56px;border-bottom:1px solid #DCC9A3;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <image-slot id="hd-logo" shape="circle" placeholder="logo" style="width:40px;height:40px"></image-slot>
+          <span style="font-family:Georgia,serif;font-size:20px;">GueZ.</span>
+        </div>
+        <nav style="display:flex;gap:36px;font-size:14.5px;color:#3B2A1D;">
+          <a href="./Servicos.dc.html" style="text-decoration:none;color:#3B2A1D;">Serviços</a>
+          <a href="./Portfolio.dc.html" style="text-decoration:none;color:#3B2A1D;">Portfólio</a>
+          <a href="#" style="text-decoration:none;color:#3B2A1D;">Sobre</a>
+          <a href="./Contato.dc.html" style="text-decoration:none;color:#3B2A1D;">Contato</a>
+        </nav>
+        <a href="./Contato.dc.html" style="background:#A83E1D;color:#FBF6EC;font-size:14px;font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;">Fale com a gente</a>
+      </header>
+
+      <!-- HERO -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;align-items:stretch;">
+        <div style="padding:80px 56px;display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#A83E1D;margin-bottom:16px;">Agência boutique de social media</div>
+          <h1 style="font-family:Georgia,serif;font-size:52px;line-height:1.12;margin:0 0 22px;">Toda marca tem uma história que merece ser contada de verdade</h1>
+          <p style="font-size:17px;line-height:1.6;color:#6B5642;margin:0 0 32px;max-width:460px;">Storytelling, social media e cobertura de eventos em tempo real — para marcas de Novo Hamburgo e do Vale do Sinos.</p>
+          <div style="display:flex;gap:14px;">
+            <a href="./Contato.dc.html" style="background:#A83E1D;color:#FBF6EC;padding:16px 28px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none;">Fale com a gente</a>
+            <a href="./Servicos.dc.html" style="background:transparent;border:1.5px solid #3B2A1D;color:#3B2A1D;padding:16px 28px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;">Ver serviços</a>
+          </div>
+        </div>
+        <image-slot id="hd-hero" shape="rect" placeholder="reel/foto de capa" style="width:100%;height:100%;min-height:520px"></image-slot>
+      </div>
+
+      <!-- QUEM É -->
+      <div style="padding:72px 56px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
+        <div>
+          <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#8a6f4e;margin-bottom:12px;">Quem é a GueZ</div>
+          <p style="font-family:Georgia,serif;font-size:30px;line-height:1.35;margin:0 0 20px;">Somos a Lucy e a Érica: storytelling, marketing e fotografia, de perto e com alma.</p>
+          <p style="font-size:15px;line-height:1.7;color:#6B5642;max-width:480px;">Trabalho autoral e de baixa escala — cada marca que atendemos recebe atenção de verdade, do roteiro à entrega.</p>
+        </div>
+        <div style="display:flex;gap:24px;">
+          <div style="text-align:center;flex:1;">
+            <image-slot id="hd-lucy" shape="circle" placeholder="foto Lucy" style="width:140px;height:140px;margin:0 auto;"></image-slot>
+            <div style="font-size:15px;font-weight:600;margin-top:12px;">Lucy Freitas</div>
+            <div style="font-size:13px;color:#8a6f4e;">Storymaker</div>
+          </div>
+          <div style="text-align:center;flex:1;">
+            <image-slot id="hd-erica" shape="circle" placeholder="foto Érica" style="width:140px;height:140px;margin:0 auto;"></image-slot>
+            <div style="font-size:15px;font-weight:600;margin-top:12px;">Érica Schmidt</div>
+            <div style="font-size:13px;color:#8a6f4e;">Marketing &amp; fotografia</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVIÇOS RESUMO -->
+      <div style="padding:0 56px 72px;">
+        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#8a6f4e;margin-bottom:20px;">Serviços</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+          <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:20px;padding:32px;">
+            <div style="font-family:Georgia,serif;font-size:22px;margin-bottom:10px;">Planos mensais</div>
+            <div style="font-size:14.5px;color:#6B5642;line-height:1.6;">Presença constante no social media, do Light ao Plus.</div>
+          </div>
+          <div style="background:#3B2A1D;border-radius:20px;padding:32px;color:#F4ECDB;">
+            <div style="font-family:Georgia,serif;font-size:22px;margin-bottom:10px;">Real time de eventos ✦</div>
+            <div style="font-size:14.5px;color:#E7D9BE;line-height:1.6;">Foto e vídeo entregues durante o próprio evento.</div>
+          </div>
+          <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:20px;padding:32px;">
+            <div style="font-family:Georgia,serif;font-size:22px;margin-bottom:10px;">Avulsos</div>
+            <div style="font-size:14.5px;color:#6B5642;line-height:1.6;">Posts, vídeos, artes e estratégia sob demanda.</div>
+          </div>
+        </div>
+        <a href="./Servicos.dc.html" style="display:inline-block;margin-top:24px;font-size:14.5px;font-weight:600;text-decoration:none;">Ver todos os serviços →</a>
+      </div>
+
+      <!-- DIFERENCIAL REAL TIME -->
+      <div style="margin:0 56px 72px;background:#EAD9B8;border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr repeat(3,1fr);gap:32px;align-items:center;">
+        <div style="font-family:Georgia,serif;font-size:26px;line-height:1.3;">Como funciona o real time</div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:32px;height:32px;border-radius:50%;background:#A83E1D;color:#FBF6EC;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div><div style="font-size:14.5px;padding-top:5px;">Captamos os melhores momentos</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:32px;height:32px;border-radius:50%;background:#A83E1D;color:#FBF6EC;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div><div style="font-size:14.5px;padding-top:5px;">Editamos no local, em tempo real</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:32px;height:32px;border-radius:50%;background:#A83E1D;color:#FBF6EC;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div><div style="font-size:14.5px;padding-top:5px;">Entregamos durante o evento</div></div>
+      </div>
+
+      <!-- PORTFOLIO DESTAQUE -->
+      <div style="padding:0 56px 72px;">
+        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#8a6f4e;margin-bottom:20px;">Cases em destaque</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+          <div style="position:relative;border-radius:16px;overflow:hidden;background:#FBF6EC;border:1px solid #DCC9A3;">
+            <image-slot id="hd-pf-1" shape="rect" placeholder="Casa Coffee Colab" style="width:100%;height:180px"></image-slot>
+            <div style="position:absolute;top:10px;left:10px;background:#FBF6EC;border-radius:999px;padding:4px 10px;font-size:10px;font-weight:700;color:#A83E1D;">REAL TIME</div>
+            <div style="padding:12px 14px;font-size:13.5px;font-weight:600;">Casa Coffee Colab</div>
+          </div>
+          <div style="border-radius:16px;overflow:hidden;background:#FBF6EC;border:1px solid #DCC9A3;">
+            <image-slot id="hd-pf-2" shape="rect" placeholder="H.Maria Joias" style="width:100%;height:180px"></image-slot>
+            <div style="padding:12px 14px;font-size:13.5px;font-weight:600;">H.Maria Joias</div>
+          </div>
+          <div style="border-radius:16px;overflow:hidden;background:#FBF6EC;border:1px solid #DCC9A3;">
+            <image-slot id="hd-pf-3" shape="rect" placeholder="Ensaio de marca" style="width:100%;height:180px"></image-slot>
+            <div style="padding:12px 14px;font-size:13.5px;font-weight:600;">Ensaio de marca</div>
+          </div>
+          <div style="position:relative;border-radius:16px;overflow:hidden;background:#FBF6EC;border:1px solid #DCC9A3;">
+            <image-slot id="hd-pf-4" shape="rect" placeholder="Casamento ao vivo" style="width:100%;height:180px"></image-slot>
+            <div style="position:absolute;top:10px;left:10px;background:#FBF6EC;border-radius:999px;padding:4px 10px;font-size:10px;font-weight:700;color:#A83E1D;">REAL TIME</div>
+            <div style="padding:12px 14px;font-size:13.5px;font-weight:600;">Casamento ao vivo</div>
+          </div>
+        </div>
+        <a href="./Portfolio.dc.html" style="display:inline-block;margin-top:24px;font-size:14.5px;font-weight:600;text-decoration:none;">Ver portfólio completo →</a>
+      </div>
+
+      <!-- DEPOIMENTOS -->
+      <div style="padding:0 56px 72px;">
+        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#8a6f4e;margin-bottom:20px;">Quem já contou a história com a gente</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:18px;padding:28px;">
+            <p style="font-family:Georgia,serif;font-style:italic;font-size:18px;line-height:1.5;margin:0 0 14px;">"A GueZ entendeu nossa marca antes mesmo da gente conseguir explicar."</p>
+            <div style="font-size:13px;color:#8a6f4e;">Casa Coffee Colab</div>
+          </div>
+          <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:18px;padding:28px;">
+            <p style="font-family:Georgia,serif;font-style:italic;font-size:18px;line-height:1.5;margin:0 0 14px;">"Receber o vídeo do evento ainda na festa foi surreal."</p>
+            <div style="font-size:13px;color:#8a6f4e;">H.Maria Joias</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA FINAL -->
+      <div style="margin:0 56px 72px;background:#3B2A1D;border-radius:24px;padding:56px;color:#F4ECDB;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+        <div>
+          <div style="font-family:Georgia,serif;font-size:30px;margin-bottom:12px;">Bora contar essa história?</div>
+          <p style="font-size:15px;color:#E7D9BE;margin:0;">Deixa seu contato que a gente te chama em até 1 dia útil.</p>
+        </div>
+        <div style="display:flex;gap:12px;">
+          <input placeholder="Seu nome" style="flex:1;box-sizing:border-box;padding:14px 16px;border-radius:10px;border:none;background:#F4ECDB;font-size:14px;color:#3B2A1D;"/>
+          <input placeholder="WhatsApp ou e-mail" style="flex:1;box-sizing:border-box;padding:14px 16px;border-radius:10px;border:none;background:#F4ECDB;font-size:14px;color:#3B2A1D;"/>
+          <a href="./Contato.dc.html" style="background:#D6A24A;color:#3B2A1D;padding:14px 24px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;">Enviar</a>
+        </div>
+      </div>
+
+      <footer style="background:#3B2A1D;color:#E7D9BE;padding:40px 56px;display:flex;justify-content:space-between;gap:40px;">
+        <div style="max-width:340px;">
+          <div style="font-family:Georgia,serif;font-size:19px;color:#F4ECDB;margin-bottom:10px;">GueZ.</div>
+          <p style="font-size:13.5px;line-height:1.6;color:#C9B695;margin:0;">Marketing e mídias sociais boutique, de Novo Hamburgo para o mundo — histórias contadas de verdade.</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-direction:column;font-size:13.5px;">
+          <a href="./Servicos.dc.html" style="color:#E7D9BE;text-decoration:none;">Serviços</a>
+          <a href="./Portfolio.dc.html" style="color:#E7D9BE;text-decoration:none;">Portfólio</a>
+          <a href="#" style="color:#E7D9BE;text-decoration:none;">Sobre</a>
+          <a href="./Contato.dc.html" style="color:#E7D9BE;text-decoration:none;">Contato</a>
+        </div>
+        <div style="font-size:13px;color:#C9B695;display:flex;flex-direction:column;gap:5px;">
+          <span>@guez.com.br</span><span>guezagenciamkt@gmail.com</span><span>Novo Hamburgo / RS</span>
+          <a href="#" style="color:#D6A24A;text-decoration:none;margin-top:6px;">Política de Privacidade</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+  </sc-if>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;layout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;ambos&quot;,&quot;options&quot;:[&quot;ambos&quot;,&quot;mobile&quot;,&quot;desktop&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const layout = this.props.layout ?? 'ambos';
+    return {
+      showMobile: layout !== 'desktop',
+      showDesktop: layout !== 'mobile'
+    };
+  }
+}
+</script>
+</body>
+</html>

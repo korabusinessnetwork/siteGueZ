@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body{margin:0;background:#F4ECDB;}
+  ::selection{background:#D6A24A;color:#3B2A1D;}
+</style>
+</helmet>
+
+<div style="font-family:'Work Sans',Arial,sans-serif;background:#F4ECDB;color:#3B2A1D;min-height:100vh;padding:0 0 96px 0;">
+
+  <div style="max-width:1120px;margin:0 auto;padding:56px 24px 32px;">
+    <div style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#8a6f4e;margin-bottom:10px;">GueZ · Marketing e Mídias Sociais</div>
+    <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:36px;line-height:1.15;margin:0 0 14px;">Direção visual &amp; design system</h1>
+    <p style="font-size:16px;line-height:1.6;color:#6B5642;max-width:640px;margin:0;">Fundação visual do site institucional/portfólio da GueZ, fiel à estética já existente no Instagram da marca: diário criativo, tons terrosos, carimbo circular e uma dupla que conta histórias de verdade.</p>
+    <div style="margin-top:20px;font-size:13px;color:#8a6f4e;background:#EAD9B8;display:inline-block;padding:8px 14px;border-radius:10px;">⚠ Hex e fontes abaixo foram estimados a partir do print do Instagram anexado — ajuste fino quando o arquivo de marca original (logo vetorial) estiver disponível.</div>
+  </div>
+
+  <!-- MOODBOARD -->
+  <div style="max-width:1120px;margin:0 auto;padding:24px 24px 0;">
+    <h2 style="font-family:Georgia,serif;font-size:22px;margin:0 0 4px;">Moodboard</h2>
+    <p style="font-size:14px;color:#6B5642;margin:0 0 20px;">Craft artesanal sutil: papel, washi tape, clipes — nunca dark, nunca corporativo.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+      <image-slot id="ds-mood-1" shape="rounded" radius="14" placeholder="foto: caderno + washi tape" style="width:100%;height:160px"></image-slot>
+      <image-slot id="ds-mood-2" shape="rounded" radius="14" placeholder="foto: dupla nos bastidores" style="width:100%;height:160px"></image-slot>
+      <image-slot id="ds-mood-3" shape="rounded" radius="14" placeholder="still de real time (evento)" style="width:100%;height:160px"></image-slot>
+      <image-slot id="ds-mood-4" shape="rounded" radius="14" placeholder="detalhe: selo/carimbo" style="width:100%;height:160px"></image-slot>
+    </div>
+  </div>
+
+  <!-- PALETTE -->
+  <div style="max-width:1120px;margin:0 auto;padding:48px 24px 0;">
+    <h2 style="font-family:Georgia,serif;font-size:22px;margin:0 0 4px;">Paleta</h2>
+    <p style="font-size:14px;color:#6B5642;margin:0 0 20px;">Tons terrosos e quentes, extraídos do selo/carimbo da marca. Máximo 2 cores de fundo por página.</p>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;">
+      <div>
+        <div style="height:88px;border-radius:12px;background:#F4ECDB;border:1px solid #DCC9A3;"></div>
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Creme base</div>
+        <div style="font-size:12px;color:#8a6f4e;">#F4ECDB</div>
+        <div style="font-size:11px;color:#8a6f4e;margin-top:2px;">Fundo principal</div>
+      </div>
+      <div>
+        <div style="height:88px;border-radius:12px;background:#FBF6EC;border:1px solid #DCC9A3;"></div>
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Papel claro</div>
+        <div style="font-size:12px;color:#8a6f4e;">#FBF6EC</div>
+        <div style="font-size:11px;color:#8a6f4e;margin-top:2px;">Cards, inputs</div>
+      </div>
+      <div>
+        <div style="height:88px;border-radius:12px;background:#D6A24A;"></div>
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Dourado mostarda</div>
+        <div style="font-size:12px;color:#8a6f4e;">#D6A24A</div>
+        <div style="font-size:11px;color:#8a6f4e;margin-top:2px;">Secundária, selos, ícones</div>
+      </div>
+      <div>
+        <div style="height:88px;border-radius:12px;background:#C24E2C;"></div>
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Laranja queimado</div>
+        <div style="font-size:12px;color:#8a6f4e;">#C24E2C</div>
+        <div style="font-size:11px;color:#8a6f4e;margin-top:2px;">Destaque / CTA (base)</div>
+      </div>
+      <div>
+        <div style="height:88px;border-radius:12px;background:#3B2A1D;"></div>
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Marrom terroso</div>
+        <div style="font-size:12px;color:#F4ECDB;">#3B2A1D</div>
+        <div style="font-size:11px;color:#8a6f4e;margin-top:2px;">Texto, neutro escuro</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;background:#FBF6EC;border:1px solid #DCC9A3;border-radius:14px;padding:20px 24px;">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;">Contraste (AA)</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:13px;color:#6B5642;">
+        <div>Marrom #3B2A1D sobre creme #F4ECDB — <b style="color:#3B2A1D;">≈11:1, AAA</b></div>
+        <div>Creme #FBF6EC sobre laranja-CTA #A83E1D — <b style="color:#3B2A1D;">≈5.2:1, AA texto</b></div>
+        <div>Marrom #3B2A1D sobre dourado #D6A24A — <b style="color:#3B2A1D;">≈4.6:1, AA texto</b></div>
+        <div>Dourado #D6A24A sobre creme — <b style="color:#A83E1D;">≈1.8:1, não usar como texto</b></div>
+      </div>
+      <div style="font-size:12px;color:#8a6f4e;margin-top:10px;">Para botões sólidos usamos <b>#A83E1D</b> (laranja um pouco mais escuro que o do selo) — garante AA com texto creme mantendo a mesma família de cor.</div>
+    </div>
+  </div>
+
+  <!-- TYPOGRAPHY -->
+  <div style="max-width:1120px;margin:0 auto;padding:48px 24px 0;">
+    <h2 style="font-family:Georgia,serif;font-size:22px;margin:0 0 4px;">Tipografia</h2>
+    <p style="font-size:14px;color:#6B5642;margin:0 0 20px;">Georgia (serifada, elegante, com boa presença em títulos e no wordmark) + Work Sans (sans limpa e calorosa no corpo).</p>
+    <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:14px;padding:28px 32px;">
+      <div style="font-family:Georgia,serif;font-size:44px;line-height:1.1;">Aa — Toda marca tem uma história</div>
+      <div style="font-size:12px;color:#8a6f4e;margin:6px 0 20px;">Georgia · Display / H1 · 44px mobile → 64px desktop</div>
+      <div style="font-family:Georgia,serif;font-size:26px;line-height:1.2;">Cobertura de eventos em real time</div>
+      <div style="font-size:12px;color:#8a6f4e;margin:6px 0 20px;">Georgia · H2 · 22px mobile → 30px desktop</div>
+      <div style="font-family:'Work Sans',sans-serif;font-size:17px;font-weight:500;">Storytelling, social media e fotografia com alma.</div>
+      <div style="font-size:12px;color:#8a6f4e;margin:6px 0 20px;">Work Sans Medium · Subheadline · 16–18px</div>
+      <div style="font-family:'Work Sans',sans-serif;font-size:15px;line-height:1.6;color:#6B5642;">Texto corrido em Work Sans Regular, 15–16px, altura de linha 1.6 para leitura confortável em telas pequenas.</div>
+      <div style="font-size:12px;color:#8a6f4e;margin-top:6px;">Work Sans Regular · Corpo</div>
+    </div>
+  </div>
+
+  <!-- TOKENS -->
+  <div style="max-width:1120px;margin:0 auto;padding:48px 24px 0;">
+    <h2 style="font-family:Georgia,serif;font-size:22px;margin:0 0 4px;">Espaçamento, raio e sombra</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:16px;">
+      <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:14px;padding:20px;">
+        <div style="font-size:13px;font-weight:600;margin-bottom:12px;">Espaçamento</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6B5642;"><div style="width:4px;height:14px;background:#C24E2C;"></div>4px</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6B5642;"><div style="width:8px;height:14px;background:#C24E2C;"></div>8px</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6B5642;"><div style="width:16px;height:14px;background:#C24E2C;"></div>16px</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6B5642;"><div style="width:24px;height:14px;background:#C24E2C;"></div>24px</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6B5642;"><div style="width:32px;height:14px;background:#C24E2C;"></div>32px</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6B5642;"><div style="width:48px;height:14px;background:#C24E2C;"></div>48px</div>
+        </div>
+      </div>
+      <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:14px;padding:20px;">
+        <div style="font-size:13px;font-weight:600;margin-bottom:12px;">Raio de borda</div>
+        <div style="display:flex;gap:12px;align-items:flex-end;">
+          <div style="width:36px;height:36px;background:#D6A24A;border-radius:8px;"></div>
+          <div style="width:36px;height:36px;background:#D6A24A;border-radius:14px;"></div>
+          <div style="width:36px;height:36px;background:#D6A24A;border-radius:22px;"></div>
+          <div style="width:36px;height:36px;background:#D6A24A;border-radius:50%;"></div>
+        </div>
+        <div style="font-size:12px;color:#6B5642;margin-top:10px;">sm 8 · md 14 · lg 22 · selo 50%</div>
+      </div>
+      <div style="background:#FBF6EC;border:1px solid #DCC9A3;border-radius:14px;padding:20px;">
+        <div style="font-size:13px;font-weight:600;margin-bottom:12px;">Sombra (leve, quente)</div>
+        <div style="width:100%;height:56px;background:#F4ECDB;border-radius:12px;box-shadow:0 8px 24px rgba(59,42,29,.14);"></div>
+        <div style="font-size:12px;color:#6B5642;margin-top:10px;">0 8px 24px rgba(59,42,29,.14)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRAFT ELEMENTS -->
+  <div style="max-width:1120px;margin:0 auto;padding:48px 24px 0;">
+    <h2 style="font-family:Georgia,serif;font-size:22px;margin:0 0 4px;">Elementos craft (uso sutil)</h2>
+    <p style="font-size:14px;color:#6B5642;margin:0 0 20px;">Detalhes pontuais — selo, washi tape e papel. Quem brilha é a foto/vídeo.</p>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;">
+      <div style="text-align:center;">
+        <div style="width:96px;height:96px;border-radius:50%;border:2px dashed #C24E2C;display:flex;align-items:center;justify-content:center;background:#FBF6EC;">
+          <div style="font-family:Georgia,serif;font-size:11px;text-align:center;line-height:1.3;color:#3B2A1D;">REAL<br/>TIME</div>
+        </div>
+        <div style="font-size:12px;color:#8a6f4e;margin-top:8px;">Selo/carimbo</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:96px;height:32px;background:rgba(214,162,74,.55);transform:rotate(-4deg);border-radius:2px;box-shadow:0 2px 6px rgba(59,42,29,.12);"></div>
+        <div style="font-size:12px;color:#8a6f4e;margin-top:8px;">Washi tape</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:96px;height:72px;background:#FBF6EC;border-radius:10px;box-shadow:0 6px 16px rgba(59,42,29,.14);"></div>
+        <div style="font-size:12px;color:#8a6f4e;margin-top:8px;">Card papel</div>
+      </div>
+      <div style="text-align:center;">
+        <image-slot id="ds-logo" shape="circle" placeholder="logo GueZ (selo)" style="width:96px;height:96px"></image-slot>
+        <div style="font-size:12px;color:#8a6f4e;margin-top:8px;">Marca / abelha</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPONENTS -->
+  <div style="max-width:1120px;margin:0 auto;padding:48px 24px 0;">
+    <h2 style="font-family:Georgia,serif;font-size:22px;margin:0 0 20px;">Componentes</h2>
+
+    <div style="font-size:13px;font-weight:600;margin-bottom:10px;">Botões</div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px;">
+      <button style="background:#A83E1D;color:#FBF6EC;border:none;padding:13px 26px;border-radius:999px;font-family:'Work Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;" style-hover="background:#8f3316;">Fale com a gente</button>
+      <button style="background:#8f3316;color:#FBF6EC;border:none;padding:13px 26px;border-radius:999px;font-family:'Work Sans',sans-serif;font-size:14px;font-weight:600;">Hover</button>
+      <button style="background:transparent;color:#3B2A1D;border:1.5px solid #3B2A1D;padding:13px 26px;border-radius:999px;font-family:'Work Sans',sans-serif;font-size:14px;font-weight:600;">Ver serviços</button>
+      <button disabled="" style="background:#E4D6BC;color:#a99878;border:none;padding:13px 26px;border-radius:999px;font-family:'Work Sans',sans-serif;font-size:14px;font-weight:600;">Desabilitado</button>
+    </div>
+
+    <div style="font-size:13px;font-weight:600;margin-bottom:10px;">Card de plano</div>
+    <div style="max-width:280px;background:#FBF6EC;border:1px solid #DCC9A3;border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(59,42,29,.10);margin-bottom:28px;position:relative;">
+      <div style="position:absolute;top:-10px;right:20px;width:64px;height:22px;background:rgba(214,162,74,.55);transform:rotate(3deg);border-radius:2px;"></div>
+      <div style="font-family:Georgia,serif;font-size:20px;">GueZ Basic</div>
+      <div style="font-size:13px;color:#6B5642;margin:6px 0 16px;">Presença consistente no social media</div>
+      <ul style="list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:#3B2A1D;">
+        <li>✓ 12 artes por mês</li>
+        <li>✓ Stories semanais</li>
+        <li>✓ Relatório mensal</li>
+      </ul>
+      <button style="width:100%;background:#A83E1D;color:#FBF6EC;border:none;padding:12px;border-radius:999px;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;">Quero esse plano</button>
+    </div>
+
+    <div style="font-size:13px;font-weight:600;margin-bottom:10px;">Card de portfólio (com poster de vídeo)</div>
+    <div style="max-width:280px;background:#FBF6EC;border:1px solid #DCC9A3;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(59,42,29,.10);margin-bottom:28px;">
+      <div style="position:relative;">
+        <image-slot id="ds-card-poster" shape="rect" placeholder="poster do vídeo" style="width:100%;height:170px"></image-slot>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(59,42,29,.55);display:flex;align-items:center;justify-content:center;">
+            <div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:11px solid #FBF6EC;margin-left:3px;"></div>
+          </div>
+        </div>
+        <div style="position:absolute;top:10px;left:10px;background:#FBF6EC;border-radius:999px;padding:4px 10px;font-size:10px;font-weight:700;letter-spacing:.04em;color:#A83E1D;">REAL TIME</div>
+      </div>
+      <div style="padding:14px 16px;">
+        <div style="font-size:14px;font-weight:600;">Casa Coffee Colab</div>
+        <div style="font-size:12px;color:#8a6f4e;">Cobertura de evento · Vídeo</div>
+      </div>
+    </div>
+
+    <div style="font-size:13px;font-weight:600;margin-bottom:10px;">Formulário — estados</div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:640px;">
+      <div>
+        <div style="font-size:11px;color:#8a6f4e;margin-bottom:6px;">Normal</div>
+        <input placeholder="Seu nome" style="width:100%;box-sizing:border-box;padding:12px 14px;border-radius:10px;border:1.5px solid #DCC9A3;background:#FBF6EC;font-family:'Work Sans',sans-serif;font-size:14px;color:#3B2A1D;"/>
+      </div>
+      <div>
+        <div style="font-size:11px;color:#8a6f4e;margin-bottom:6px;">Foco</div>
+        <input placeholder="Seu nome" style="width:100%;box-sizing:border-box;padding:12px 14px;border-radius:10px;border:1.5px solid #A83E1D;background:#FBF6EC;font-family:'Work Sans',sans-serif;font-size:14px;color:#3B2A1D;box-shadow:0 0 0 3px rgba(168,62,29,.15);"/>
+      </div>
+      <div>
+        <div style="font-size:11px;color:#8a6f4e;margin-bottom:6px;">Enviando</div>
+        <div style="width:100%;box-sizing:border-box;padding:12px 14px;border-radius:10px;border:1.5px solid #DCC9A3;background:#EAD9B8;font-family:'Work Sans',sans-serif;font-size:13px;color:#8a6f4e;">Enviando mensagem…</div>
+      </div>
+      <div>
+        <div style="font-size:11px;color:#8a6f4e;margin-bottom:6px;">Sucesso / Erro</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:10px 14px;border-radius:10px;background:#EFE8D6;border:1px solid #B5822F;font-size:12px;color:#6B5642;">✓ Mensagem enviada!</div>
+          <div style="padding:10px 14px;border-radius:10px;background:#F6E2D8;border:1px solid #A83E1D;font-size:12px;color:#A83E1D;">Algo deu errado. Tente de novo.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>
